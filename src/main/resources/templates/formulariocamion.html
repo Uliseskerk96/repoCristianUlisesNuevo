@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agregar Camión</title>
+</head>
+<body>
+    <h1>Agregar Camión</h1>
+    <form action="/camion/guardar" method="post">
+        <label>Patente:</label>
+        <input type="text" name="patente" required><br>
+        <label>Ciudad Actual:</label>
+        <input type="text" name="ciudadActual" required><br>
+        <label>Marca:</label>
+        <input type="text" name="marca" required><br>
+        <label>Modelo:</label>
+        <input type="number" name="modelo" required><br>
+        <button type="submit">Guardar</button>
+    </form>
+    <div th:if="${error}" th:text="${error}" style="color: red;"></div>
+</body>
+</html>

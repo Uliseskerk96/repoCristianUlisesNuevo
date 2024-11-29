@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Camiones</title>
+</head>
+<body>
+    <h1>Camiones</h1>
+    <a href="/camion/nuevo">Agregar Camión</a>
+    <table border="1">
+        <tr>
+            <th>Patente</th>
+            <th>Ciudad Actual</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+        </tr>
+        <tr th:each="camion : ${camiones}">
+            <td th:text="${camion.patente}"></td>
+            <td th:text="${camion.ciudadActual}"></td>
+            <td th:text="${camion.marca}"></td>
+            <td th:text="${camion.modelo}"></td>
+        </tr>
+    </table>
+</body>
+</html>
